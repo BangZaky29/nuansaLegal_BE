@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS nuansalegal_db;
+USE nuansalegal_db;
+
+CREATE TABLE IF NOT EXISTS images (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  path VARCHAR(500) NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  sub_category VARCHAR(100),
+  alt_text TEXT,
+  original_path VARCHAR(500),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS faqs (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  question TEXT NOT NULL,
+  answer TEXT NOT NULL,
+  category VARCHAR(100) DEFAULT 'General',
+  order_index INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
