@@ -21,7 +21,8 @@ const allowedOrigins = [
   'http://localhost:4173',
   'http://127.0.0.1:4173',
   'https://nuansalegal.id',
-  'https://www.nuansalegal.id'
+  'https://www.nuansalegal.id',
+  'https://inputlegalweb.nuansalegal.id'
 ];
 
 app.use(cors({
